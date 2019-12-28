@@ -108,5 +108,9 @@ in {
             "keyboard.dispatch" = "keyCode";
             "workbench.iconTheme" = "file-icons";
         };
+        # steam
+        home.packages = with pkgs; [
+            steam
+        ]; 
     };
 }
