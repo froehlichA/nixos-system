@@ -36,6 +36,9 @@ in {
         "HOME" = {
             pskRaw = "71810e496f663dfafca33c70cca43911db914a3f175bec4ff5e0920f7bd7471f";
         };
+        "Untrusted Network" = {
+            pskRaw = "af803502c7a467aeb9bafbc68253bdf938033256adc91d36ac2e0e02b8b82ec1";
+        };
     };
 
     # APPLICATIONS
