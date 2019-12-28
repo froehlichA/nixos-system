@@ -7,8 +7,8 @@ let
         #!${pkgs.stdenv.shell}
         mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
-        git clone https://github.com/froehlichA/nixos
-        cd nixos
+        git clone https://github.com/froehlichA/nixos-system
+        cd nixos-system
         ./deploy.sh
         cd ../..
         rm -rf nixos-custom-updater/
