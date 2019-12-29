@@ -109,6 +109,8 @@ in {
     services.clipmenu.enable = true;
     # printing
     services.printing.enable = true;
+    # ntfs
+    boot.supportedFilesystems = [ "ntfs" ];
 
     # NUR
 	nixpkgs.config.packageOverrides = pkgs: {
