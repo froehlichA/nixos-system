@@ -28,4 +28,12 @@
 	hardware.enableRedistributableFirmware = true;                                                                                                                                                                   
 	hardware.opengl.enable = true;                                                                                                                                                                                   
 	hardware.opengl.driSupport = true;
+
+	# SOUND
+	boot.extraModprobeConfig = ''
+		options snd slots=snd-hda-intel
+		options snd_hda_intel enable=0,1
+    '';
+	boot.blacklistedKernelModules = [ "snd_pcsp" ];
+
 }

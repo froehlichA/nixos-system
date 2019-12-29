@@ -22,4 +22,9 @@
 
     # NVIDIA GPU
     hardware.bumblebee.enable = true;
+
+	# SOUND
+	boot.extraModprobeConfig = ''
+        options snd slots=snd-hda-intel
+    '';
 }

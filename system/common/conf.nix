@@ -54,6 +54,7 @@ in {
         neofetch
         unzip
         xclip
+        lsof
         # Auto updater
         autoUpdater
     ];
@@ -83,12 +84,13 @@ in {
             description = "Alexander Fröhlich";
             isNormalUser = true;
             shell = pkgs.zsh;
-            extraGroups = [ "wheel" "networkmanager" ];
+            extraGroups = [ "wheel" "networkmanager" "audio" ];
         };
         mc = {
             description = "MC User";
             isNormalUser = true;
             shell = pkgs.zsh;
+            extraGroups = [ "audio" ];
         };
     };
 
@@ -104,7 +106,7 @@ in {
     services.dbus.packages = [ pkgs.gnome3.dconf ];
     # sound
     sound.enable = true;
-    hardware.pulseaudio.enable = true;
+    #hardware.pulseaudio.enable = true;
     # clipping
     services.clipmenu.enable = true;
     # printing
