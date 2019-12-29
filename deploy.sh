@@ -15,7 +15,7 @@ function deployForSystem ()
         sudo cp -r home/$USR/ /home/$USR/.config/nixpkgs
         sudo cp -r home/common/ /home/$USR/.config/nixpkgs
         echo "symlinking.."
-        sudo ln -sf /home/$USR/.config/nixpkgs/$USR/$SYSTEM.nix /home/$USR/.config/nixpkgs/home.nixos
+        sudo ln -sf /home/$USR/.config/nixpkgs/$USR/$SYSTEM.nix /home/$USR/.config/nixpkgs/home.nix
     done
 
     echo "building $USER config.."
