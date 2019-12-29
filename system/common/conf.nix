@@ -20,6 +20,8 @@ in {
     	../../hardware-configuration.nix
   	];
 
+    nixpkgs.config.allowUnfree = true;
+
     # LANGUAGE & LOCATION
     i18n.consoleKeyMap = "de-latin1-nodeadkeys";
     i18n.defaultLocale = "en_GB.UTF-8";
