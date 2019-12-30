@@ -48,7 +48,7 @@ in {
     # APPLICATIONS
     environment.systemPackages = with pkgs; [
         # Browser
-        firefox
+        firefox-bin
         # System management
         feh
         git
