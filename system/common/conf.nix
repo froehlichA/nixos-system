@@ -55,6 +55,8 @@ in {
         unzip
         xclip
         lsof
+        # Sound
+        lxqt.pavucontrol-qt
         # Auto updater
         autoUpdater
     ];
@@ -105,8 +107,8 @@ in {
     programs.dconf.enable = true;
     services.dbus.packages = [ pkgs.gnome3.dconf ];
     # sound
+    hardware.pulseaudio.enable = true;
     sound.enable = true;
-    #hardware.pulseaudio.enable = true;
     # clipping
     services.clipmenu.enable = true;
     # printing
@@ -126,7 +128,6 @@ in {
     # GAMING
 	hardware.opengl.driSupport32Bit = true;
 	hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
-	hardware.pulseaudio.support32Bit = true;
-  
+	
   	system.stateVersion = "19.09";
 }
