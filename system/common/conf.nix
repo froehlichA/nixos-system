@@ -18,6 +18,8 @@ in {
     	# HARDWARE
         # - automatically links with the system-generated one when deploying
     	../../hardware-configuration.nix
+        # ACPID Events
+        ./acpid.nix
   	];
 
     nixpkgs.config.allowUnfree = true;
@@ -115,6 +117,8 @@ in {
     services.clipmenu.enable = true;
     # printing
     services.printing.enable = true;
+    # acpid (for hotkeys)
+    services.acpid.enable = true;
     # ntfs
     boot.supportedFilesystems = [ "ntfs" ];
 
