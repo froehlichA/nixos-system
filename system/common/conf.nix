@@ -109,6 +109,8 @@ in {
     # sound
     hardware.pulseaudio.enable = true;
     sound.enable = true;
+    # backlight
+    programs.light.enable = true;
     # clipping
     services.clipmenu.enable = true;
     # printing
