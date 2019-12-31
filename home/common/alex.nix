@@ -107,6 +107,8 @@ in {
             "window.titleBarStyle" = "custom";
             "keyboard.dispatch" = "keyCode";
             "workbench.iconTheme" = "file-icons";
+            "git.enableSmartCommit" = true;
+            "git.confirmSync" = false;
         };
         # steam
         home.packages = with pkgs; [
