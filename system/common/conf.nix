@@ -113,12 +113,11 @@ in {
     sound.enable = true;
     # backlight
     programs.light.enable = true;
+    services.acpid.enable = true;
     # clipping
     services.clipmenu.enable = true;
     # printing
     services.printing.enable = true;
-    # acpid (for hotkeys)
-    services.acpid.enable = true;
     # ntfs
     boot.supportedFilesystems = [ "ntfs" ];
 

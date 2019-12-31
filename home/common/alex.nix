@@ -31,7 +31,12 @@ in {
                 mod = config.xsession.windowManager.i3.config.modifier;
             in lib.mkOptionDefault {
                 "${mod}+d" = "exec rofi -show drun";	
-            };  
+            };
+            config.keycodebindings = {
+                "121" = "exec --no-startup-id amixer -q set Master toggle";
+                "122" = "exec --no-startup-id amixer -q set Master 5%- unmute";
+                "123" = "exec --no-startup-id amixer -q set Master 5%+ unmute";
+            };
             config.startup = [
                 {
                     command = "./.config/nixout/polybar/polybar.sh";
@@ -65,10 +70,6 @@ in {
         programs.urxvt.fonts = [ "xft:FantasqueSansMono Nerd Font:size=10" ];
         programs.urxvt.scroll.bar.enable = false;
         programs.urxvt.extraConfig = colors // { internalBorder = 10; };
-        programs.urxvt.keybindings = {
-            "Control-c" = "eval:selection_to_clipboard";
-            "Control-v" = "eval:paste_clipboard";
-        };
 
         # ZSH
         programs.zsh.enable = true;
