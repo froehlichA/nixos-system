@@ -8,7 +8,7 @@
         ../common/mc.nix
         ../common/conf/openbox/default-rc.nix
         ../common/conf/openbox/mc-menu.nix
-        ../common/theme/bg/bloodmoon.nix
+        ../common/theme/bg/blackmountains.nix
         ../common/theme/openbox/bonzo.nix
         ../common/theme/tint2/flatstudio.nix
     ]; 
