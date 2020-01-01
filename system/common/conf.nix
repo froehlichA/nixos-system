@@ -61,6 +61,8 @@ in {
         lxqt.pavucontrol-qt
         # Auto updater
         autoUpdater
+        # VSCODE ( for editing config as mc)
+        vscode
     ];
     environment.variables.EDITOR = "micro";
     services.urxvtd.enable = true;
@@ -94,7 +96,7 @@ in {
             description = "MC User";
             isNormalUser = true;
             shell = pkgs.zsh;
-            extraGroups = [ "audio" ];
+            extraGroups = [ "wheel" "audio" ];
         };
     };
 
