@@ -10,6 +10,6 @@
         ../common/conf/openbox/mc-menu.nix
         ../common/theme/bg/bloodmoon.nix
         ../common/theme/openbox/bonzo.nix
-        ../common/theme/tint2/lumis.nix
+        ../common/theme/tint2/flatstudio.nix
     ];   
 }
