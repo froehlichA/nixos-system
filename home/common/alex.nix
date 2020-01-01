@@ -8,16 +8,12 @@ let
     cfg = config.style;
     colors = cfg.colors;
 in {
-    options.style = {
-        colors = mkOption {
-            type = types.attrs;
-            description = "Colors used for styling.";
-        };
-    };
+    imports = [
+        # COMMON
+        ./common.nix
+    ];
 
     config = {
-        programs.home-manager.enable = true;
-        nixpkgs.config.allowUnfree = true;
 
         # I3
         xsession.enable = true;
@@ -29,7 +25,7 @@ in {
             config.gaps.outer = 5;
             config.keybindings = let
                 mod = config.xsession.windowManager.i3.config.modifier;
-            in lib.mkOptionDefault {
+            in mkOptionDefault {
                 "${mod}+d" = "exec rofi -show drun";	
             };
             config.keycodebindings = {

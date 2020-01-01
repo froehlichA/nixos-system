@@ -1,23 +1,17 @@
 # COMMON HOME CONFIGURATION (User "MC")
 
-{ config, pkgs, lib, ... }:
-
-with lib; 
+{ config, pkgs, ... }:
 
 let
     cfg = config.style;
     colors = cfg.colors;
 in {
-	options.style = {
-        colors = mkOption {
-            type = types.attrs;
-            description = "Colors used for styling.";
-        };
-    };
+	imports = [
+        # COMMON
+        ./common.nix
+    ];
 
 	config = {
-		programs.home-manager.enable = true;
-		nixpkgs.config.allowUnfree = true;
 
 		# OPENBOX
 		xsession.enable = true;
