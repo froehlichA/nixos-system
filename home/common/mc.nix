@@ -20,6 +20,12 @@ in {
 		# TINT2
 		xsession.initExtra = "tint2 &";
 
+		# BACKGROUND IMAGE
+		home.file.".config/openbox/autostart" = {
+			text = "feh --bg-fill ~/.background-image";
+			executable = true;
+		};
+
 		# GTK & QT
         gtk.enable = true;
 		home.file.".themes/Lumiere/gtk-2.0" = {
@@ -59,6 +65,8 @@ in {
 			tint2
 			libreoffice
 			multimc
+			lxappearance
+			xsettingsd
 		];
 	};
 }
