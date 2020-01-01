@@ -41,16 +41,16 @@ in {
             border_color = #E3E3E3 0
 
             # ID 6
-            #rounded = 0
-            #border_width = 0
-            #background_color = #304050 100
-            #border_color = #304050 0
+            rounded = 0
+            border_width = 0
+            background_color = ${colors.color1} 100
+            border_color = ${colors.color1} 0
 
             # Panel
             panel_monitor = all
-            panel_items = LTSBC
+            panel_items = PTSBC
             panel_position = bottom center horizontal
-            panel_size = 100% 30
+            panel_size = 100% 40
             panel_margin = 0 0
             panel_padding = 0 0 0
             panel_dock = 0
@@ -64,6 +64,15 @@ in {
             autohide_hide_timeout = 1.5
             autohide_height = 6
             strut_policy = follow_size
+
+            # Button
+            button = new
+            button_text = NixOS
+            button_background_id = 6
+            button_font_color = ${colors.background} 100
+            button_padding = 30 30 0
+            button_centered = 1
+            button_font = Anonymice 16
 
             # Taskbar
             taskbar_name = 0
@@ -80,10 +89,10 @@ in {
 
             # Tasks
             urgent_nb_of_blink = 20
-            task_icon = 0
+            task_icon = 1
             task_text = 1
             task_centered = 1
-            task_maximum_size = 0 0
+            task_maximum_size = 200 200
             task_padding = 8 6
             task_background_id = 4
             task_active_background_id = 2
@@ -131,7 +140,7 @@ in {
             tooltip_font_color = #474747 100
 
             # Mouse
-            mouse_middle = close
+            mouse_middle = none
             mouse_right = none
             mouse_scroll_up = none
             mouse_scroll_down = none
@@ -149,6 +158,7 @@ in {
 
             # Launchers
             launcher_background_id = 1
+            launcher_icon_theme = Papirus
             launcher_icon_size = 16
             launcher_padding = 8 0 16
 
