@@ -14,5 +14,9 @@ with lib;
         programs.home-manager.enable = true;
         nixpkgs.config.allowUnfree = true;
 
+        home.file.".local/share/fonts" = {
+            source = ./fonts;
+            recursive = true;
+        };
     };
 }
