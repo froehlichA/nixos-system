@@ -38,14 +38,14 @@ in {
 
         !! Titlebar
         window.active.title.bg: flat
-        window.active.title.bg.color: #bc435d
+        window.active.title.bg.color: ${colors.color1}
         window.inactive.title.bg: flat
         window.inactive.title.bg.color: #ffffff
 
         !! Titlebar text
         window.label.text.justify: center
         window.active.label.bg: parentrelative
-        window.active.label.text.color: #2f343f
+        window.active.label.text.color: ${colors.background}
         window.inactive.label.bg: parentrelative
         window.inactive.label.text.color: #606060
 
