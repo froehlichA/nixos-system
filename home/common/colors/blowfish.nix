@@ -2,23 +2,23 @@
 
 {
     style.colors = {
-		background = "#010101";
-		foreground = "#f8d8f8";
-		color0 = "#1d2b53";
-		color8 = "#1d2b53";
-		color1 = "#ff004d";
-		color9 = "#ff004d";
-		color2 = "#83769c";
-		color10 = "#83769c";
-		color3 = "#ffccaa";
-		color11 = "#ffccaa";
-		color4 = "#29adff";
-		color12 = "#29adff";	
-		color5 = "#7e2553";
-		color13 = "#7e2553";
-		color6 = "#ff77a8";
-		color14 = "#ff77a8";
-		color7 = "#fff1e8";
-		color15 = "#fff1e8";
+		background = "#181512";
+		foreground = "#fbf0d2";
+		color0 = "#282828";
+		color8 = "#454545";
+		color1 = "#e93c93";
+		color9 = "#a87181";
+		color2 = "#00a17c";
+		color10 = "#76a571";
+		color3 = "#f79031";
+		color11 = "#d0a845";
+		color4 = "#00c0ce";
+		color12 = "#008ba5";	
+		color5 = "#86458b";
+		color13 = "#a0446c";
+		color6 = "#8eb173";
+		color14 = "#007d62";
+		color7 = "#d3cab3";
+		color15 = "#f4f3e2";
 	};
 }
