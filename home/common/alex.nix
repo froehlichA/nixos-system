@@ -107,9 +107,11 @@ in {
             "git.enableSmartCommit" = true;
             "git.confirmSync" = false;
         };
-        # steam
         home.packages = with pkgs; [
+            # steam
             steam
+            # scrot
+            scrot
         ]; 
     };
 }
