@@ -33,7 +33,7 @@ in {
     networking.useDHCP = false; # DHCP should be enabled per-interface in the system confs
     networking.enableIPv6 = false;
     networking.networkmanager.enable = true;
-    options.programs.nm-applet.enable = true;
+    programs.nm-applet.enable = true;
 
     # APPLICATIONS
     environment.systemPackages = with pkgs; [
