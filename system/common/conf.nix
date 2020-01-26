@@ -5,13 +5,13 @@
 let
     autoUpdater = pkgs.writeScriptBin "os-update" ''
         #!${pkgs.stdenv.shell}
+        rm -rf /tmp/nixos-custom-updater/
         mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
         git clone https://github.com/froehlichA/nixos-system
         cd nixos-system
-        ./deploy.sh
+        ./deploy.sh --system --users
         cd ../..
-        rm -rf nixos-custom-updater/
     '';
 in {
     imports = [
