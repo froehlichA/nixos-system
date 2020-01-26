@@ -28,15 +28,15 @@ in {
 
 		# GTK & QT
         gtk.enable = true;
-		home.file.".themes/Lumiere/gtk-2.0" = {
-			source = ./theme/gtk/Lumiere/gtk-2.0;
+		home.file.".themes/Fantome/gtk-2.0" = {
+			source = ./theme/gtk/Fantome/gtk-2.0;
 			recursive = true;
 		};
-		home.file.".themes/Lumiere/gtk-3.0" = {
-			source = ./theme/gtk/Lumiere/gtk-3.0;
+		home.file.".themes/Fantome/gtk-3.0" = {
+			source = ./theme/gtk/Fantome/gtk-3.0;
 			recursive = true;		
 		};
-        gtk.theme.name = "Lumiere";
+        gtk.theme.name = "Fantome";
         gtk.iconTheme.package = pkgs.papirus-icon-theme;
         gtk.iconTheme.name = "Papirus";
         qt.enable = true;
