@@ -18,10 +18,7 @@ in {
 		xsession.windowManager.command = "${pkgs.openbox}/bin/openbox-session";
 
 		# TINT2
-		xsession.initExtra = ''
-			tint2 &
-			setxkbmap at
-		'';
+		xsession.initExtra = "tint2 &";
 
 		# BACKGROUND IMAGE
 		home.file.".config/openbox/autostart" = {
