@@ -32,18 +32,8 @@ in {
     # NETWORKING
     networking.useDHCP = false; # DHCP should be enabled per-interface in the system confs
     networking.enableIPv6 = false;
-    networking.wireless.enable = true;
-    networking.wireless.networks = {
-        "FHOME_2" = {
-            pskRaw = "b092be10e59cd75953c9241cdb698ef7c9eb023df0f37e64e4446db3c841eef5";
-        };
-        "HOME" = {
-            pskRaw = "71810e496f663dfafca33c70cca43911db914a3f175bec4ff5e0920f7bd7471f";
-        };
-        "Untrusted Network" = {
-            pskRaw = "af803502c7a467aeb9bafbc68253bdf938033256adc91d36ac2e0e02b8b82ec1";
-        };
-    };
+    networking.networkmanager.enable = true;
+    options.programs.nm-applet.enable = true;
 
     # APPLICATIONS
     environment.systemPackages = with pkgs; [
@@ -96,7 +86,7 @@ in {
             description = "MC User";
             isNormalUser = true;
             shell = pkgs.zsh;
-            extraGroups = [ "wheel" "audio" ];
+            extraGroups = [ "wheel" "networkmanager" "audio" ];
         };
     };
 
