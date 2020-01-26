@@ -103,6 +103,12 @@ in {
     # sound
     hardware.pulseaudio.enable = true;
     sound.enable = true;
+    systemd.user.services."pa-applet" = {
+        description = "PulseAudio Applet";
+        wantedBy = [ "graphical-session.target" ];
+        partOf = [ "graphical-session.target" ];
+        script = "${pkgs.pa_applet}/bin/pa-applet";
+    };
     # backlight
     programs.light.enable = true;
     services.acpid.enable = true;

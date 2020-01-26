@@ -21,6 +21,9 @@ in {
             font-0 = "FantasqueSansMono Nerd Font;0";
             modules-left = "i3";
             modules-right = "cpu memory wired wireless battery date";
+            tray-position = "center";
+            tray-maxsize = 16;
+            tray-padding = 4;
         };
 
         "module/battery" = {
