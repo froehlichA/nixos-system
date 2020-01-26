@@ -44,7 +44,7 @@ for arg in "$@"
 do
     if [ "$arg" == "--system" ] || [ "$arg" == "-s" ]
     then
-        deployForSystem $SYSTEM_TYP 4
+        deployForSystem $SYSTEM_TYPE
     fi
     if [ "$arg" == "--users" ]  || [ "$arg" == "-u" ]
     then
