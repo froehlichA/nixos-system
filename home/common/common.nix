@@ -18,5 +18,9 @@ with lib;
             source = ./fonts;
             recursive = true;
         };
+
+        # KEYBOARD LAYOUT
+        # (Setting it globally someone doesn't work??)
+        xsession.initExtra = "setxkbmap at";
     };
 }

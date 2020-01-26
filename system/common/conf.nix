@@ -25,8 +25,9 @@ in {
     nixpkgs.config.allowUnfree = true;
 
     # LANGUAGE & LOCATION
-    i18n.consoleKeyMap = "de-latin1-nodeadkeys";
     i18n.defaultLocale = "en_GB.UTF-8";
+    services.xserver.layout = "at";
+    i18n.consoleUseXkbConfig = true;
     time.timeZone = "Europe/Vienna";
 
     # NETWORKING
@@ -61,7 +62,6 @@ in {
     # XSERVER
     services.xserver = {
         enable = true;
-        layout = "at";
         desktopManager.default = "none";
         desktopManager.xterm.enable = false;
         # LightDM
