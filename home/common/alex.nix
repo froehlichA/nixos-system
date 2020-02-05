@@ -108,5 +108,17 @@ in {
             # scrot
             scrot
         ]; 
+        # taskwarrior
+        home.file.".task" = {
+            source = ./conf/taskwarrior;
+            recursive = true;
+        };
+        programs.taskwarrior.enable = true;
+        programs.taskwarrior.config.taskd.ca = "~/.task/ca.cert";
+        programs.taskwarrior.config.taskd.certificate = "~/.task/home/alex/public.cert";
+        programs.taskwarrior.config.taskd.key = "~/.task/home/alex/private.key";
+        programs.taskwarrior.config.taskd.credentials = "home/alex/58d7565e-10ab-4ead-b92e-cc8fefb6ae63";
+        programs.taskwarrior.config.taskd.server = "10.0.0.1:53589";
+        programs.taskwarrior.config.taskd.trust = "ignore hostname";
     };
 }
