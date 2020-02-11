@@ -26,7 +26,8 @@ in {
             config.keybindings = let
                 mod = config.xsession.windowManager.i3.config.modifier;
             in mkOptionDefault {
-                "${mod}+d" = "exec rofi -show drun";	
+                "${mod}+d" = "exec --no-startup-id rofi -show drun";
+                "${mod}+Shift+s" = "exec --no-startup-id scrot";
             };
             config.startup = [
                 {
