@@ -18,8 +18,6 @@ in {
     	# HARDWARE
         # - automatically links with the system-generated one when deploying
     	../../hardware-configuration.nix
-        # ACPID Events
-        ./acpid.nix
   	];
 
     nixpkgs.config.allowUnfree = true;
@@ -75,19 +73,15 @@ in {
 
     # USERS
     users.defaultUserShell = pkgs.zsh;
-    users.users = {
-        alex = {
-            description = "Alexander Fröhlich";
+    users.users = let
+        superuser = {
             isNormalUser = true;
             shell = pkgs.zsh;
             extraGroups = [ "wheel" "networkmanager" "audio" ];
         };
-        mc = {
-            description = "MC User";
-            isNormalUser = true;
-            shell = pkgs.zsh;
-            extraGroups = [ "wheel" "networkmanager" "audio" ];
-        };
+    in {
+        alex = superuser // { description = "Alexander Fröhlich"; };
+        mc = superuser // { description = "MC User"; };
     };
 
     # SSH
@@ -112,11 +106,21 @@ in {
     # backlight
     programs.light.enable = true;
     services.acpid.enable = true;
+    services.acpid.handlers = {
+        brightness-up = {
+            action = "/run/current-system/sw/bin/light -A 30";
+            event = "video/brightnessup.*";
+        };
+        brightness-down = {
+            action = "/run/current-system/sw/bin/light -U 30";
+            event = "video/brightnessdown.*";
+        };
+    };
     # clipping
     services.clipmenu.enable = true;
     # printing
     services.printing.enable = true;
-    # ntfs
+    # ntfs support
     boot.supportedFilesystems = [ "ntfs" ];
 
     # NUR
