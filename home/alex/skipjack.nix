@@ -23,6 +23,5 @@
         riot-desktop
         # RUST PROGRAMMING
         rustup
-        cargo
     ];
 }
