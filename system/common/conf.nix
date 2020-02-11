@@ -3,15 +3,15 @@
 { stdenv, config, pkgs, ... }:
 
 let
-    autoUpdater = pkgs.writeScriptBin "os-update" ''
+    repository = "https://github.com/froehlichA/nixos-system";
+    autoUpdater = pkgs.writeScriptBin "nixos-update" ''
         #!${pkgs.stdenv.shell}
         rm -rf /tmp/nixos-custom-updater/
         mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
-        git clone https://github.com/froehlichA/nixos-system
+        git clone ${repository}
         cd nixos-system
         ./deploy.sh --system --users
-        cd ../..
     '';
 in {
     imports = [
