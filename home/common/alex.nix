@@ -118,7 +118,7 @@ in {
         programs.taskwarrior.config.taskd.certificate = "~/.task/home/alex/public.cert";
         programs.taskwarrior.config.taskd.key = "~/.task/home/alex/private.key";
         programs.taskwarrior.config.taskd.credentials = "home/alex/58d7565e-10ab-4ead-b92e-cc8fefb6ae63";
-        programs.taskwarrior.config.taskd.server = "10.0.0.1:53589";
+        programs.taskwarrior.config.taskd.server = "atbash.froehlich.network:53589";
         programs.taskwarrior.config.taskd.trust = "ignore hostname";
     };
 }

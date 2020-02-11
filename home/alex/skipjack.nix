@@ -16,6 +16,13 @@
     services.polybar.config."module/wired".interface = "enp3s0f0";
     services.polybar.config."module/wireless".interface = "wlp1s0";
 
-    # NixOps Deployment
-    home.packages = with pkgs; [ nixops ];
+    home.packages = with pkgs; [
+        # NIXOPS DEPLOYMENT
+        nixops
+        # RIOT CLIENT FOR MATRIX
+        riot-desktop
+        # RUST PROGRAMMING
+        rustup
+        cargo
+    ];
 }
