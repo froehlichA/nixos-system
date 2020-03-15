@@ -23,5 +23,9 @@
         riot-desktop
         # RUST PROGRAMMING
         rustup
+        # GAMEDEV
+        godot
+        aseprite
+        tiled
     ];
 }
