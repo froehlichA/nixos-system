@@ -7,12 +7,12 @@ let
     autoUpdater = pkgs.writeScriptBin "nixos-update" ''
         #!${pkgs.stdenv.shell}
         if [[ ! $(sudo echo 0) ]]; then exit; fi
-        rm -rf /tmp/nixos-custom-updater/
-        mkdir -p /tmp/nixos-custom-updater/
+        sudo rm -rf /tmp/nixos-custom-updater/
+        sudo mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
         git clone ${repository}
         cd nixos-system
-        ./deploy.sh --system --users
+        sudo ./deploy.sh --system --users
     '';
 in {
     imports = [
