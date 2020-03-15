@@ -10,7 +10,7 @@ let
         sudo rm -rf /tmp/nixos-custom-updater/
         sudo mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
-        git clone ${repository}
+        sudo git clone ${repository}
         cd nixos-system
         sudo ./deploy.sh --system --users
     '';
