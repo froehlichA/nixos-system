@@ -6,6 +6,7 @@ let
     repository = "https://github.com/froehlichA/nixos-system";
     autoUpdater = pkgs.writeScriptBin "nixos-update" ''
         #!${pkgs.stdenv.shell}
+        if [[ ! $(sudo echo 0) ]]; then exit; fi
         rm -rf /tmp/nixos-custom-updater/
         mkdir -p /tmp/nixos-custom-updater/
         cd /tmp/nixos-custom-updater/
