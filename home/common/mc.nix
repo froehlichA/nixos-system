@@ -67,6 +67,7 @@ in {
 			multimc
 			lxappearance
 			xsettingsd
+			skypeforlinux
 		];
 	};
 }
