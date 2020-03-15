@@ -29,6 +29,7 @@ in {
     time.timeZone = "Europe/Vienna";
 
     # NETWORKING
+    networking.firewall.enable = false; # Because Minecraft stuff
     networking.useDHCP = false; # DHCP should be enabled per-interface in the system confs
     networking.enableIPv6 = false;
     networking.networkmanager.enable = true;
