@@ -26,7 +26,7 @@ in {
     # LANGUAGE & LOCATION
     i18n.defaultLocale = "en_GB.UTF-8";
     services.xserver.layout = "at";
-    i18n.consoleUseXkbConfig = true;
+    console.useXkbConfig = true;
     time.timeZone = "Europe/Vienna";
 
     # NETWORKING
@@ -62,9 +62,9 @@ in {
     # XSERVER
     services.xserver = {
         enable = true;
-        desktopManager.default = "none";
         desktopManager.xterm.enable = false;
         # LightDM
+	    displayManager.defaultSession = "none+i3";
         displayManager.lightdm.enable = true;
         # I3
         windowManager.i3.enable = true;
@@ -83,7 +83,6 @@ in {
         };
     in {
         alex = superuser // { description = "Alexander Fröhlich"; };
-        mc = superuser // { description = "MC User"; };
     };
 
     # SSH

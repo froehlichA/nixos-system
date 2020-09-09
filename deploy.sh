@@ -15,7 +15,7 @@ function deployForSystem ()
 function deployForUsers ()
 {
     SYSTEM=$1
-    for USR in alex mc
+    for USR in alex
     do
         echo "DEPLOYING $USR CONFIGS.."
         sudo cp -r home/$USR/ /home/$USR/.config/nixpkgs
@@ -23,7 +23,7 @@ function deployForUsers ()
         echo "symlinking.."
         sudo ln -sf /home/$USR/.config/nixpkgs/$USR/$SYSTEM.nix /home/$USR/.config/nixpkgs/home.nix
     done
-    echo "building $USER config.."
+    echo "building $USR config.."
     home-manager switch
 }
 

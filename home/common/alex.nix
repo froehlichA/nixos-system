@@ -58,7 +58,6 @@ in {
 
         # URXVT
         programs.urxvt.enable = true;
-        programs.urxvt.package = pkgs.rxvt_unicode_with-plugins;
         programs.urxvt.fonts = [ "xft:FantasqueSansMono Nerd Font:size=10" ];
         programs.urxvt.scroll.bar.enable = false;
         programs.urxvt.extraConfig = colors // { internalBorder = 10; };
@@ -109,17 +108,5 @@ in {
             # scrot
             scrot
         ]; 
-        # taskwarrior
-        home.file.".task" = {
-            source = ./conf/taskwarrior;
-            recursive = true;
-        };
-        programs.taskwarrior.enable = true;
-        programs.taskwarrior.config.taskd.ca = "~/.task/ca.cert";
-        programs.taskwarrior.config.taskd.certificate = "~/.task/home/alex/public.cert";
-        programs.taskwarrior.config.taskd.key = "~/.task/home/alex/private.key";
-        programs.taskwarrior.config.taskd.credentials = "home/alex/58d7565e-10ab-4ead-b92e-cc8fefb6ae63";
-        programs.taskwarrior.config.taskd.server = "atbash.froehlich.network:53589";
-        programs.taskwarrior.config.taskd.trust = "ignore hostname";
     };
 }
