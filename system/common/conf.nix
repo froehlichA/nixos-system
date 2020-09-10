@@ -19,6 +19,7 @@ in {
     	# HARDWARE
         # - automatically links with the system-generated one when deploying
     	../../hardware-configuration.nix
+        ./themes/sddm.nix
   	];
 
     nixpkgs.config.allowUnfree = true;
@@ -63,14 +64,16 @@ in {
     services.xserver = {
         enable = true;
         desktopManager.xterm.enable = false;
-        # LightDM
+        # SDDM
 	    displayManager.defaultSession = "none+i3";
-        displayManager.lightdm.enable = true;
+        displayManager.sddm.enable = true;
+        # Sddm Theme set in ./themes/sddm.nix
+        displayManager.sessionCommands = ''
+            systemctl --user import-environment QT_PLUGIN_PATH
+        '';
         # I3
         windowManager.i3.enable = true;
         windowManager.i3.package = pkgs.i3-gaps;
-        # Openbox
-        windowManager.openbox.enable = true;
     };
 
     # USERS
@@ -137,5 +140,5 @@ in {
 	hardware.opengl.driSupport32Bit = true;
 	hardware.opengl.extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
 	
-  	system.stateVersion = "19.09";
+  	system.stateVersion = "19.01";
 }
