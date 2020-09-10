@@ -19,8 +19,6 @@
     home.packages = with pkgs; [
         # NIXOPS DEPLOYMENT
         nixops
-        # RIOT CLIENT FOR MATRIX
-        riot-desktop
         # RUST PROGRAMMING
         rustup
         # GAMEDEV
