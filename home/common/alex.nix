@@ -75,7 +75,8 @@ in {
         gtk.iconTheme.package = pkgs.paper-icon-theme;
         gtk.iconTheme.name = "Paper";
         qt.enable = true;
-        qt.platformTheme = "gtk";
+        # Doesn't work for now, reenable later
+        #qt.platformTheme = "gtk";
 
         # POLYBAR
         services.polybar.enable = true;

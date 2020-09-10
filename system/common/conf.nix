@@ -129,12 +129,10 @@ in {
 
     # NUR
 	nixpkgs.config.packageOverrides = pkgs: {
-		nur = import (builtins.fetchTarball {
-			url="https://github.com/nix-community/NUR/archive/master.tar.gz";
-		}) {
-			inherit pkgs;
-		};
-	};
+        nur = import <nur> {
+            inherit pkgs;
+        };
+    };
 
     # GAMING
 	hardware.opengl.driSupport32Bit = true;
