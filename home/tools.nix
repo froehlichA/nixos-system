@@ -11,6 +11,7 @@
     # urxvt
     programs.urxvt.enable = true;
     programs.urxvt.fonts = [ "xft:MesloLGS Nerd Font Mono:pixelsize=14" ];
+    programs.urxvt.scroll.bar.enable = false;
     programs.urxvt.extraConfig = let colors = config.theme.colors; in colors // {
         foreground = colors.fg;
         background = colors.bg;
@@ -88,6 +89,7 @@
         unzip
         # GUI
         lxqt.pavucontrol-qt
+        xfce.thunar
         spotify
         steam
     ];
