@@ -77,6 +77,10 @@
         nixfmt
     ];
 
+    # SERVICES
+    services.gnome-keyring.enable = true;
+    services.gnome-keyring.components = [ "secrets" ];
+
 
     home.packages = with pkgs; [
         # COMMAND LINE
