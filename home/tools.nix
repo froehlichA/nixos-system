@@ -1,5 +1,9 @@
 { pkgs, upkgs, lib, config, ... }:
 {
+    require = [
+        ../pkgs/neofetch/.options.nix
+    ];
+
     # HOME MANAGER
     programs.home-manager.enable = true;
 
@@ -38,6 +42,8 @@
     services.lorri.enable = true;
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
+    # neofetch
+    programs.neofetch.enable = true;
 
     # GUI
     # firefox
@@ -78,7 +84,6 @@
         feh
         libnotify
         micro
-        neofetch
         nixfmt
         unzip
         # GUI
