@@ -65,6 +65,7 @@
         "git.confirmSync" = false;
         "editor.fontFamily" = "'MesloLGS Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'";
         "terminal.external.linuxExec" = "urxvt";
+        "github.gitAuthentication" = false;
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
@@ -79,7 +80,6 @@
 
     # SERVICES
     services.gnome-keyring.enable = true;
-    services.gnome-keyring.components = [ "secrets" ];
 
 
     home.packages = with pkgs; [
@@ -91,10 +91,12 @@
         scrot
         unzip
         xclip
+        gnome3.gnome-keyring
         # GUI
         lxqt.pavucontrol-qt
         spotify
         steam
         xfce.thunar
+        gnome3.seahorse
     ];
 }
