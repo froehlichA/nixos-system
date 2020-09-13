@@ -9,8 +9,8 @@
 
     # GTK & QT
     gtk.enable = true;
-    gtk.theme.package = pkgs.arc-theme;
-    gtk.theme.name = "Arc-Dark";
+    gtk.theme.package = pkgs.adapta-gtk-theme;
+    gtk.theme.name = "Adapta-Nokto";
     gtk.iconTheme.package = pkgs.papirus-icon-theme;
     gtk.iconTheme.name = "Papirus";
     qt.enable = true;
