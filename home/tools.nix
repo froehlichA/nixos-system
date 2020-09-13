@@ -89,14 +89,13 @@
         micro
         nixfmt
         scrot
+        steam-run
         unzip
         xclip
-        gnome3.gnome-keyring
         # GUI
         lxqt.pavucontrol-qt
         spotify
         steam
         xfce.thunar
-        gnome3.seahorse
     ];
 }
