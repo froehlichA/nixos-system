@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+    direnv = pkgs.callPackage ./direnv.nix {};
+
     file-icons = pkgs.callPackage ./file-icons.nix {};
 
     gitgraph = pkgs.callPackage ./gitgraph.nix {};

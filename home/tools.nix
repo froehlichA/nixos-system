@@ -69,13 +69,14 @@
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
+        direnv
         file-icons
         gitgraph
         gitlens
+        nixfmt
         path-intellisense
         pdf
         prettier
-        nixfmt
     ];
 
     # SERVICES
