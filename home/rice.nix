@@ -34,7 +34,7 @@ in {
         in lib.mkOptionDefault {
             "${mod}+d" = "exec --no-startup-id ${config.programs.rofi.scripts.apps}";
             "${mod}+Shift+e" = "exec --no-startup-id ${config.programs.rofi.scripts.power}";
-            "${mod}+Shift+s" = "exec --no-startup-id ${pkgs.flameshot}/bin/flameshot gui";
+            "${mod}+Shift+s" = "exec --no-startup-id ${pkgs.scrot}/bin/scrot;";
         };
         config.startup = [
             {

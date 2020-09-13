@@ -6,7 +6,7 @@
 
     # DBUS
     programs.dconf.enable = true;
-    services.dbus.packages = with pkgs; [ gnome3.dconf flameshot ];
+    services.dbus.packages = with pkgs; [ gnome3.dconf ];
 
     # SOUND
     hardware.pulseaudio.enable = true;

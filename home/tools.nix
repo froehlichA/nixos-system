@@ -55,8 +55,6 @@
         path = "tx4v24t0.default";
         isDefault = true;
     };
-    # screenshots
-    services.flameshot.enable = true;
     # vscode
     programs.vscode.enable = true;
     programs.vscode.userSettings = {
@@ -86,11 +84,13 @@
         libnotify
         micro
         nixfmt
+        scrot
         unzip
+        xclip
         # GUI
         lxqt.pavucontrol-qt
-        xfce.thunar
         spotify
         steam
+        xfce.thunar
     ];
 }
