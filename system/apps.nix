@@ -7,7 +7,4 @@
 
     # SSH
     programs.ssh.startAgent = true;
-    /*programs.ssh.knownHosts = {
-        github.publicKeyFile = ./files/id_rsa.pub;
-    };*/
 }
