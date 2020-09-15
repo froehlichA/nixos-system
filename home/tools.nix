@@ -25,7 +25,7 @@
         powerlevel10k
         {
             name = "powerlevel10k-config";
-            src = lib.cleanSource ./.;
+            src = lib.cleanSource ./assets;
             file = "p10k.zsh";
         }
     ];

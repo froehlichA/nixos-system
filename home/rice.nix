@@ -18,7 +18,7 @@ in {
             primary = c.color2;
             secondary = c.color2;
         });
-        background = ./background.jpg;
+        background = ./assets/background.jpg;
     };
 
     # I3
