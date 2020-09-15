@@ -7,6 +7,7 @@
         ./hardware.nix
         ./language.nix
         ./networking.nix
+        ./services.nix
         ./users.nix
         ./xserver.nix
     ];

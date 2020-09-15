@@ -95,6 +95,7 @@
         xclip
         # GUI
         lxqt.pavucontrol-qt
+        (callPackage ./tmp/mongodb-compass.nix {})
         spotify
         steam
         xfce.thunar
