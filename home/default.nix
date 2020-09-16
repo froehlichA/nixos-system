@@ -3,6 +3,7 @@
     require = [
         ./basic.nix
         ./rice.nix
+        ./services.nix
         ./tools.nix
     ];
 
