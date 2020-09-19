@@ -83,10 +83,6 @@
         prettier
     ];
 
-    # SERVICES
-    services.gnome-keyring.enable = true;
-
-
     home.packages = with pkgs; [
         # COMMAND LINE
         feh
