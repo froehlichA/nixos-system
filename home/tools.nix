@@ -49,11 +49,15 @@
     # GUI
     # firefox
     programs.firefox.enable = true;
-    programs.firefox.profiles.default = {
+    programs.firefox.profiles.default = 
+    let theme = upkgs.theme.firefox.simplefox;
+    in {
         id = 0;
         name = "default";
         path = "tx4v24t0.default";
         isDefault = true;
+        userChrome = theme.userChrome;
+        userContent = theme.userContent;
     };
     # vscode
     programs.vscode.enable = true;
