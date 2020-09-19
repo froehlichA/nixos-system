@@ -30,6 +30,7 @@
         }
     ];
     programs.zsh.shellAliases.cat = "bat";
+    programs.zsh.shellAliases.man = "tldr";
     # bat
     programs.bat.enable = true;
     programs.bat.config.theme = "base16";
@@ -85,19 +86,20 @@
 
     home.packages = with pkgs; [
         # COMMAND LINE
-        feh
-        libnotify
-        micro
-        nixfmt
-        scrot
-        steam-run
-        unzip
-        xclip
+        feh # image display
+        libnotify # dunst
+        micro # editor
+        nixfmt # code formatting
+        scrot # screenshot
+        steam-run # nix dev tool
+        unzip # untar helper
+        xclip # clipboard manager
+        tldr # man pages
         # GUI
-        lxqt.pavucontrol-qt
-        (callPackage ./tmp/mongodb-compass.nix {})
-        spotify
-        steam
-        xfce.thunar
+        lxqt.pavucontrol-qt # sound control
+        (callPackage ./tmp/mongodb-compass.nix {}) # mongodb gui
+        spotify # music
+        steam # gaming
+        xfce.thunar # filebrowser
     ];
 }
