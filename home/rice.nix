@@ -73,8 +73,8 @@ in {
             };
         };
         scripts = {
-            apps = pkgs.writeScript "app-menu" "${config.programs.rofi.scripts.apps}";
-            power = pkgs.writeScript "power-menu" "${config.programs.rofi.scripts.power}";
+            apps = config.programs.rofi.scripts.apps;
+            power = config.programs.rofi.scripts.power;
         };
     };
 
