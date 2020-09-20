@@ -40,6 +40,7 @@
     programs.git.lfs.enable = true;
     programs.git.userName = "froehlichA";
     programs.git.userEmail = "froehlich.alexander@protonmail.com";
+    programs.git.ignores = [ ".envrc" "shell.nix" ];
     # nix dev
     services.lorri.enable = true;
     programs.direnv.enable = true;
