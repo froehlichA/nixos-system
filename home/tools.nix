@@ -71,6 +71,7 @@
         "editor.fontFamily" = "'MesloLGS Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'";
         "terminal.external.linuxExec" = "urxvt";
         "github.gitAuthentication" = false;
+        "markdown-pdf.executablePath" = "${pkgs.chromium}/bin/chromium";
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
