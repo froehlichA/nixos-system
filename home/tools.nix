@@ -97,6 +97,7 @@
         unzip # untar helper
         xclip # clipboard manager
         tldr # man pages
+        python38Packages.howdoi # stackoverflow helper
         # GUI
         lxqt.pavucontrol-qt # sound control
         (callPackage ./tmp/mongodb-compass.nix {}) # mongodb gui
