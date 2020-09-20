@@ -8,6 +8,8 @@
 
     gitlens = pkgs.callPackage ./gitlens.nix {};
 
+    markdown-it = pkgs.callPackage ./markdown-it.nix {};
+
     nixfmt = pkgs.callPackage ./nixfmt.nix {};
 
     path-intellisense = pkgs.callPackage ./path-intellisense.nix {};

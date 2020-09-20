@@ -78,6 +78,7 @@
         file-icons
         gitgraph
         gitlens
+        markdown-it
         nixfmt
         path-intellisense
         pdf
