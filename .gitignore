@@ -1,3 +1,4 @@
 # KEY AND CERT FILES
 *.key
 *.cert
+*.pem

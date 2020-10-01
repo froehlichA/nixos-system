@@ -47,6 +47,15 @@
     programs.direnv.enableZshIntegration = true;
     # neofetch
     programs.neofetch.enable = true;
+    programs.taskwarrior.enable = true;
+    programs.taskwarrior.config.taskd = {
+        certificate = "${./assets/taskwarrior/private.certificate.pem}";
+        key = "${./assets/taskwarrior/private.key.pem}";
+        ca = "${./assets/taskwarrior/ca.cert.pem}";
+        server = "taskwarrior.inthe.am:53589";
+        credentials = "inthe_am/froehlich.alexander.at/a3056706-7b92-4a89-bcb5-580e9ee5c2ab";
+        trust = "ignore hostname";
+    };
 
     # GUI
     # firefox
