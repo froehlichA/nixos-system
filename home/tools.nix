@@ -114,5 +114,15 @@
         spotify # music
         steam # gaming
         xfce.thunar # filebrowser
+        (obsidian.overrideDerivation (o: {
+            obsidian = pkgs.makeDesktopItem {
+                name = "Obsidian";
+                exec = "obsidian";
+                comment = "Knowledge Base Management";
+                desktopName = "Obsidian";
+                genericName = "Knowledge Management";
+                categories = "Office";
+            };
+        })) # Knowledge Base
     ];
 }
