@@ -85,6 +85,7 @@
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
+        aurelia
         direnv
         file-icons
         gitgraph
@@ -95,6 +96,8 @@
         pdf
         prettier
     ];
+    # pdf viewer
+    programs.zathura.enable = true;
 
     home.packages = with pkgs; [
         # COMMAND LINE

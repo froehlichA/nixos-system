@@ -9,6 +9,7 @@
         ./networking.nix
         ./services.nix
         ./users.nix
+        ./work.nix
         ./xserver.nix
     ];
 

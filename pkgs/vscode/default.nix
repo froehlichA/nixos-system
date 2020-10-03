@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+    aurelia = pkgs.callPackage ./aurelia.nix {};
+
     direnv = pkgs.callPackage ./direnv.nix {};
 
     file-icons = pkgs.callPackage ./file-icons.nix {};

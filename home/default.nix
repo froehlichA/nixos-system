@@ -5,6 +5,7 @@
         ./rice.nix
         ./services.nix
         ./tools.nix
+        ./work.nix
     ];
 
     # Propagate upkgs to other modules
