@@ -1,6 +1,7 @@
 { pkgs, colors, hardware, scripts, ... }:
 {
     "bar/main" = {
+        monitor = "\${env:MONITOR:}";
         width = "100%";
         height = 36;
         fixed-center = false;

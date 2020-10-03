@@ -41,7 +41,9 @@ in {
                 command = "${pkgs.writeScript "polybar.sh" ''
                     pkill polybar
                     while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-                    ${polybarPackage}/bin/polybar main >>/tmp/polybar1.log 2>&1 &
+                    for m in $(${polybarPackage}/bin/polybar --list-monitors | cut -d":" -f1); do
+                        MONITOR=$m ${polybarPackage}/bin/polybar main >>/tmp/polybar1.log 2>&1 &
+                    done
                 ''}";
                 always = true;
                 notification = false;
