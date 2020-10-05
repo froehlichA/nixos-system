@@ -12,6 +12,9 @@
             LOCALE_ARCHIVE = "/usr/lib/locale/locale-archive";
             # askpass isn't set either
             SSH_ASKPASS = "${pkgs.x11_ssh_askpass}/libexec/ssh-askpass";
+            # Android Dev
+            ANDROID_SDK_ROOT = "/opt/android-sdk";
+            JAVA_HOME = "/usr/lib/jvm/java-8-openjdk";
         };
     };
 
