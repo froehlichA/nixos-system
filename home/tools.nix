@@ -6,6 +6,10 @@
 
     # HOME MANAGER
     programs.home-manager.enable = true;
+    home.sessionVariables = {
+        LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
+        TERM = "xterm-256color";
+    };
 
     # COMMAND LINE
     # urxvt
@@ -31,6 +35,7 @@
     ];
     programs.zsh.shellAliases.cat = "bat";
     programs.zsh.shellAliases.man = "tldr";
+    programs.zsh.sessionVariables.TERM = "xterm-256color";
     # bat
     programs.bat.enable = true;
     programs.bat.config.theme = "base16";
