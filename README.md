@@ -1,4 +1,4 @@
-# NixOS@Skipjack
+# NixOS@Home
 
 ![](./header.png)
 
