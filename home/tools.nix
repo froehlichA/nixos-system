@@ -7,9 +7,11 @@
     # HOME MANAGER
     programs.home-manager.enable = true;
     home.sessionVariables = upkgs.autohost.withHost {
-        # Locale is weird on Non-NixOS device
         blowfish = {
-            LOCALE_ARCHIVE = "usr/lib/locale/locale-archive";
+            # Locale is weird on Non-NixOS device
+            LOCALE_ARCHIVE = "/usr/lib/locale/locale-archive";
+            # askpass isn't set either
+            SSH_ASKPASS = "${pkgs.x11_ssh_askpass}/libexec/ssh-askpass";
         };
     };
 
@@ -47,6 +49,8 @@
     programs.git.userName = "froehlichA";
     programs.git.userEmail = "froehlich.alexander@protonmail.com";
     programs.git.ignores = [ ".envrc" "shell.nix" ];
+    # ssh
+    programs.ssh.enable = true;
     # nix dev
     services.lorri.enable = true;
     programs.direnv.enable = true;
