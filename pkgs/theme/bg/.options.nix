@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 {
     options = with lib; {
         theme.background = mkOption {
@@ -10,7 +10,7 @@
     config = {
         xsession.windowManager.i3.config.startup = [
             {
-                command = "feh --bg-fill " + config.theme.background;
+                command = "${pkgs.feh}/bin/feh --bg-fill " + config.theme.background;
                 always = true;
                 notification = false;
             }

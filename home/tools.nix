@@ -6,9 +6,11 @@
 
     # HOME MANAGER
     programs.home-manager.enable = true;
-    home.sessionVariables = {
-        LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
-        TERM = "xterm-256color";
+    home.sessionVariables = upkgs.autohost.withHost {
+        # Locale is weird on Non-NixOS device
+        blowfish = {
+            LOCALE_ARCHIVE = "usr/lib/locale/locale-archive";
+        };
     };
 
     # COMMAND LINE
@@ -35,7 +37,6 @@
     ];
     programs.zsh.shellAliases.cat = "bat";
     programs.zsh.shellAliases.man = "tldr";
-    programs.zsh.sessionVariables.TERM = "xterm-256color";
     # bat
     programs.bat.enable = true;
     programs.bat.config.theme = "base16";
@@ -54,9 +55,9 @@
     programs.neofetch.enable = true;
     programs.taskwarrior.enable = true;
     programs.taskwarrior.config.taskd = {
-        certificate = "~/nixos/tw/private.certificate.pem";
-        key = "~/nixos/tw/private.key.pem";
-        ca = "~/nixos/tw/ca.cert.pem";
+        certificate = "~/.nixos/tw/private.certificate.pem";
+        key = "~/.nixos/tw/private.key.pem";
+        ca = "~/.nixos/tw/ca.cert.pem";
         server = "taskwarrior.inthe.am:53589";
         credentials = "inthe_am/froehlich.alexander.at/a3056706-7b92-4a89-bcb5-580e9ee5c2ab";
         trust = "ignore hostname";
@@ -92,6 +93,7 @@
         pkgs.vscode-extensions.bbenoist.Nix
         aurelia
         direnv
+        es-lint
         file-icons
         gitgraph
         gitlens
