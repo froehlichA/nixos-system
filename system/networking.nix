@@ -5,6 +5,10 @@
 
     # MANAGEMENT
     networking.networkmanager.enable = true;
+    networking.networkmanager.packages = with pkgs; [
+        networkmanager-openvpn
+    ];
+    
 
     # Firewall
     networking.firewall.enable = false;

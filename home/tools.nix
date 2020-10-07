@@ -16,6 +16,7 @@
             ANDROID_SDK_ROOT = "/opt/android-sdk";
             JAVA_HOME = "/usr/lib/jvm/java-8-openjdk";
         };
+        skipjack = {};
     };
 
     # COMMAND LINE
@@ -72,6 +73,7 @@
 
     # GUI
     # firefox
+    programs.chromium.enable = true;
     programs.firefox.enable = true;
     programs.firefox.profiles.default = 
     let theme = upkgs.theme.firefox.simplefox;
@@ -126,6 +128,7 @@
         tldr # man pages
         python38Packages.howdoi # stackoverflow helper
         # GUI
+        libreoffice # libreoffice
         lxqt.pavucontrol-qt # sound control
         (callPackage ./tmp/mongodb-compass.nix {}) # mongodb gui
         spotify # music
