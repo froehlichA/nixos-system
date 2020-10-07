@@ -12,8 +12,8 @@ let upkgs = pkgs.callPackage ../pkgs {}; in {
     # THEME
     theme = {
         uTheme = upkgs.colors.rasi (c: {
-            primary = c.color2;
-            secondary = c.color2;
+            primary = c.color5;
+            secondary = c.color5;
         });
         background = ./assets/background.jpg;
     };
