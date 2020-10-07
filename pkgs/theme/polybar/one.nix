@@ -20,6 +20,9 @@
         scroll-down = "i3wm-wsprev";
         modules-left = "menu workspaces";
         modules-right = "volume battery wired wireless date off";
+        tray-position = "center";
+        tray-maxsize = 16;
+        tray-padding = 4;
     };
 
     "module/menu" = {

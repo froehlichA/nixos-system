@@ -8,6 +8,11 @@
     networking.networkmanager.packages = with pkgs; [
         networkmanager-openvpn
     ];
+    programs.nm-applet.enable = true;
+    environment.systemPackages = with pkgs; [
+        networkmanager-openvpn
+        networkmanagerapplet
+    ];
     
 
     # Firewall
