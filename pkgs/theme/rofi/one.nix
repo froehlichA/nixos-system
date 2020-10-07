@@ -1,10 +1,10 @@
 { pkgs, colors, mkRofiScript, ... }:
 let commonConfig = ''
     -hide-scrollbar true \
-    -bw 0 -line-padding 10 -padding 20 -yoffset 49 \
+    -bw 3 -line-padding 10 -padding 20 -yoffset 49 \
     -font "FantasqueSansMono Nerd Font 12" \
     -color-enabled true \
-    -color-window "${colors.bg},${colors.bg},${colors.bg}" \
+    -color-window "${colors.bg},${colors.color0},${colors.color0}" \
     -color-normal "${colors.color0},${colors.fg},${colors.color0},${colors.primary},${colors.fg}" \
     -color-active "${colors.secondary},${colors.fg},${colors.color0},${colors.primary},${colors.fg}" \
     -color-urgent "${colors.color1},${colors.fg},${colors.color0},${colors.primary},${colors.fg}" \'';
