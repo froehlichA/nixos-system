@@ -12,15 +12,6 @@ in {
         ../pkgs/theme/rofi/.options.nix
     ];
 
-    # THEME
-    theme = {
-        uTheme = upkgs.colors.rasi (c: {
-            primary = c.color2;
-            secondary = c.color2;
-        });
-        background = ./assets/background.jpg;
-    };
-
     # I3
     xsession.enable = true;
     xsession.windowManager.i3 = {
