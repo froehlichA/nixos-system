@@ -11,7 +11,7 @@
             # Locale is weird on Non-NixOS device
             LOCALE_ARCHIVE = "/usr/lib/locale/locale-archive";
             # askpass isn't set either
-            SSH_ASKPASS = "${pkgs.x11_ssh_askpass}/libexec/ssh-askpass";
+            SSH_ASKPASS = "${pkgs.ksshaskpass}/bin/ksshaskpass";
             # Android Dev
             ANDROID_SDK_ROOT = "/opt/android-sdk";
             JAVA_HOME = "/usr/lib/jvm/java-8-openjdk";
