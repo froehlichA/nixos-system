@@ -7,4 +7,7 @@
             autoStart = false;
         };
     };
+
+    # redis
+    services.redis.enable = true;
 }
