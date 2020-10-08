@@ -4,6 +4,7 @@
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.loader.grub.configurationLimit = 5;
+	boot.loader.grub.splashImage = ./assets/dots.png;
 
     # TOUCHPAD
 	services.xserver.libinput.enable = true;

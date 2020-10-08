@@ -3,6 +3,8 @@
     dunst = pkgs.callPackage ./dunst {};
 
     firefox = pkgs.callPackage ./firefox {};
+    
+    grub = pkgs.callPackage ./grub {};
 
     polybar = pkgs.callPackage ./polybar {};
 
