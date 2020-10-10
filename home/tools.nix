@@ -144,5 +144,6 @@
                 categories = "Office";
             };
         })) # Knowledge Base
+        virtualbox # Virtualisation
     ];
 }
