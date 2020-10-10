@@ -1,5 +1,5 @@
 { pkgs, ... }:
 {
-    # mongodb
+    # MONGODB
     services.mongodb.enable = true;
 }

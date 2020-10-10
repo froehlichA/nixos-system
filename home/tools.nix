@@ -130,7 +130,9 @@
         # GUI
         libreoffice # libreoffice
         lxqt.pavucontrol-qt # sound control
+        discord # voice & text chat
         (callPackage ./tmp/mongodb-compass.nix {}) # mongodb gui
+        multimc # minecraft
         spotify # music
         steam # gaming
         xfce.thunar # filebrowser
