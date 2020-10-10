@@ -5,6 +5,8 @@
 	boot.loader.efi.canTouchEfiVariables = true;
 	boot.loader.grub.configurationLimit = 5;
 	boot.loader.grub.splashImage = ./assets/dots.png;
+	boot.plymouth.enable = true;
+	boot.plymouth.logo = ./assets/functional.png;
 
     # TOUCHPAD
 	services.xserver.libinput.enable = true;
@@ -14,7 +16,7 @@
 	boot.kernelParams = [ "amd_iommu=pt" "ivrs_ioapic[32]=00:14.0" "iommu=soft" ];                                                                                                                                   
 	services.xserver.videoDrivers = [ "amdgpu" ];  
 	hardware.cpu.amd.updateMicrocode = true;                                                                                                                                                                         
-	hardware.enableRedistributableFirmware = true;                                                                                                                                                               
+	hardware.enableRedistributableFirmware = true;                                                                                                                                                           
 	
 	# OPENGL
 	hardware.opengl.enable = true;                                                                                                                                                                                   
