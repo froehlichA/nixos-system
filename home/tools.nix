@@ -2,6 +2,7 @@
 {
     require = [
         ../pkgs/neofetch/.options.nix
+        ../pkgs/theme/zathura/.options.nix
     ];
 
     # HOME MANAGER
@@ -114,6 +115,7 @@
     ];
     # pdf viewer
     programs.zathura.enable = true;
+    programs.zathura.enableUTheme = true;
 
     home.packages = with pkgs; [
         # COMMAND LINE
