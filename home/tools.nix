@@ -7,8 +7,14 @@
 
     # HOME MANAGER
     programs.home-manager.enable = true;
-    home.sessionVariables = upkgs.autohost.withHost {
-        blowfish = {
+    home.sessionVariables = let
+        gsettings = pkgs.gsettings-desktop-schemas;
+        common = {
+            XDG_DATA_DIRS = "${gsettings}/share/gsettings-schemas/${gsettings.name}:" + 
+            "${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}:$XDG_DATA_DIRS";
+        };
+    in upkgs.autohost.withHost {
+        blowfish = common // {
             # Locale is weird on Non-NixOS device
             LOCALE_ARCHIVE = "/usr/lib/locale/locale-archive";
             # askpass isn't set either
@@ -17,7 +23,7 @@
             ANDROID_SDK_ROOT = "/opt/android-sdk";
             JAVA_HOME = "/usr/lib/jvm/java-8-openjdk";
         };
-        skipjack = {};
+        skipjack = common // {};
     };
 
     # COMMAND LINE
@@ -98,6 +104,7 @@
         "terminal.external.linuxExec" = "urxvt";
         "github.gitAuthentication" = false;
         "markdown-pdf.executablePath" = "${pkgs.chromium}/bin/chromium";
+        "diffEditor.renderSideBySide" = false;
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
