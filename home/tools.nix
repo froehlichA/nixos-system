@@ -108,7 +108,9 @@
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
+        atlassian
         aurelia
+        cpp
         direnv
         es-lint
         file-icons

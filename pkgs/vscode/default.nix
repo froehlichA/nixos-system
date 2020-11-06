@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
+    atlassian = pkgs.callPackage ./atlassian.nix {};
+
     aurelia = pkgs.callPackage ./aurelia.nix {};
+
+    cpp = pkgs.callPackage ./cpp.nix {};
 
     direnv = pkgs.callPackage ./direnv.nix {};
 
