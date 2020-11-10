@@ -24,6 +24,7 @@ in {
             mod = config.xsession.windowManager.i3.config.modifier;
         in lib.mkOptionDefault {
             "${mod}+d" = "exec --no-startup-id ${config.programs.rofi.scripts.apps}";
+            "${mod}+Shift+d" = "exec --no-startup-id ${config.programs.rofi.scripts.window}";
             "${mod}+Shift+e" = "exec --no-startup-id ${config.programs.rofi.scripts.power}";
             "${mod}+Shift+s" = "exec --no-startup-id ${pkgs.scrot}/bin/scrot;";
         };

@@ -32,4 +32,11 @@ in {
             *Shutdown) systemctl -i poweroff
         esac
     '';
+
+    window = mkRofiScript "window-menu" ''
+        ${pkgs.rofi}/bin/rofi -show window \
+        -width 30 \
+        ${commonConfig}
+        -i -p 'Window: '
+    '';
 }
