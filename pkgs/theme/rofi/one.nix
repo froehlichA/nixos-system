@@ -11,19 +11,19 @@ let commonConfig = ''
 in {
     apps = mkRofiScript "app-menu" ''
         ${pkgs.rofi}/bin/rofi -show drun \
-        -width 30 -xoffset 10 \
+        -width 30 \
         ${commonConfig}
         -display-drun "Applications :" -drun-display-format "{name}" \
-        -location 1 -lines 10 -columns 2 \
+        -lines 10 -columns 2 \
         -show-icons
     '';
 
     power = mkRofiScript "power-menu" ''
         MENU="$(${pkgs.rofi}/bin/rofi -dmenu \
-        -width 15 -xoffset "-10" \
+        -width 15 \
         ${commonConfig}
         -sep "|" -i -p 'System :' \
-        -location 3 -lines 4 -columns 1 \
+        -lines 4 -columns 1 \
         <<< " Lock|﫼 Logout|累 Reboot|襤 Shutdown")"
         case "$MENU" in
             *Lock) ${pkgs.i3lock-fancy}/bin/i3lock-fancy -p ;;
@@ -37,6 +37,8 @@ in {
         ${pkgs.rofi}/bin/rofi -show window \
         -width 30 \
         ${commonConfig}
-        -i -p 'Window: '
+        -i -p 'Window: ' \
+        -lines 10 -columns 2 \
+        -show-icons
     '';
 }
