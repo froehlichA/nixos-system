@@ -105,6 +105,9 @@
         "github.gitAuthentication" = false;
         "markdown-pdf.executablePath" = "${pkgs.chromium}/bin/chromium";
         "diffEditor.renderSideBySide" = false;
+        "yaml.schemas" = {
+            "file://${config.home.homeDirectory}/.vscode/extensions/atlassian.atlascode/resources/schemas/pipelines-schema.json" = "bitbucket-pipelines.yml";
+        };
     };
     programs.vscode.extensions = with upkgs.vscode; [
         pkgs.vscode-extensions.bbenoist.Nix
