@@ -120,6 +120,7 @@
         gitgraph
         gitlens
         markdown-it
+        nim
         nixfmt
         path-intellisense
         pdf

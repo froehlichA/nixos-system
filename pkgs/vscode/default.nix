@@ -18,6 +18,8 @@
 
     markdown-it = pkgs.callPackage ./markdown-it.nix {};
 
+    nim = pkgs.callPackage ./nim.nix {};
+
     nixfmt = pkgs.callPackage ./nixfmt.nix {};
 
     path-intellisense = pkgs.callPackage ./path-intellisense.nix {};
