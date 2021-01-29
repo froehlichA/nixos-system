@@ -133,6 +133,7 @@
     home.packages = with pkgs; [
         # COMMAND LINE
         feh # image display
+        filezilla # ftb access
         libnotify # dunst
         micro # editor
         nixfmt # code formatting
