@@ -60,4 +60,7 @@
 
     # UNFREE
     nixpkgs.config.allowUnfree = true;
+
+    # BROKEN
+    nixpkgs.config.allowBroken = true;
 }
