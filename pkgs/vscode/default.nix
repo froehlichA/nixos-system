@@ -27,4 +27,6 @@
     pdf = pkgs.callPackage ./pdf.nix {};
 
     prettier = pkgs.callPackage ./prettier.nix {};
+
+    tailwind = pkgs.callPackage ./tailwind.nix {};
 }

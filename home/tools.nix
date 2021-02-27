@@ -124,6 +124,7 @@
         path-intellisense
         pdf
         prettier
+        tailwind
     ];
     # pdf viewer
     programs.zathura.enable = true;
