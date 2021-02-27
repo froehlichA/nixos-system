@@ -30,4 +30,8 @@
             wlp4s0.useDHCP = true;
         };
     };
+
+    # VPN
+    services.mullvad-vpn.enable = true;
+    networking.iproute2.enable = true;
 }

@@ -151,6 +151,7 @@
         spotify # music
         steam # gaming
         xfce.thunar # filebrowser
+        mullvad-vpn # vpn
         (obsidian.overrideDerivation (o: {
             obsidian = pkgs.makeDesktopItem {
                 name = "Obsidian";
